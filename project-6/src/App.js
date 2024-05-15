@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import ClassComponent from './components/classComponents';
 import FunctionalComponent from './components/functionalComponent';
+import {Routes, Route} from "react-router-dom";
 
 
 
@@ -10,12 +11,11 @@ function App() {
   const company = "DevTown";
   const [name, setName] = useState("Rohan")
   return (
-    <div>
-      <h1>This is a function component</h1>
-      <ClassComponent></ClassComponent>
-      <FunctionalComponent name={name} age={23} company={company} setName={setName}></FunctionalComponent>
-      </div>
-  );
+  <Routes>
+    <Route path='/' element={<ClassComponent />}/>
+    <Route path='/fun-comp' element={<FunctionalComponent />}/>
+  </Routes>
+  )
 }
 
 export default App;
