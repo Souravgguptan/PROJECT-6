@@ -4,7 +4,7 @@ class ClassComponent extends React.Component{
     render(){
         return(
             <div>
-                <h2>This is a class Component</h2> 
+                <h2>This is a class component</h2> 
             </div>
         )
     }
